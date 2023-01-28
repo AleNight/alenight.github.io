@@ -20,13 +20,13 @@
         <template v-slot:prepend>
           <v-app-bar-nav-icon @click="toggleNavigation"></v-app-bar-nav-icon>
         </template>
-        <v-btn icon="mdi-dots-vertical" @click="dialog = true"></v-btn>
+        <v-btn icon="mdi-dots-vertical" @click="optionsDialog = true"></v-btn>
         <v-dialog
-          v-model="dialog" max-width="290">
+          v-model="optionsDialog" max-width="290">
             <v-card title="Opciones">
                 <v-list class="ma-2">
                     <v-list-item prepend-icon="mdi-share-variant" title="Compartir" value="share" active-color="primary" @click="shareUrl"></v-list-item>
-                    <v-list-item prepend-icon="mdi-minecraft" title="Dirección IP" value="ip" active-color="primary"></v-list-item>
+                    <v-list-item prepend-icon="mdi-minecraft" title="Dirección IP" value="ip" active-color="primary" @click="copySnackbar"></v-list-item>
                     <v-list-item prepend-icon="mdi-flag" title="Reportar" value="report" active-color="primary"></v-list-item>
                 </v-list>
             </v-card>
@@ -42,6 +42,22 @@
     </v-navigation-drawer>
             
     <v-main>
+      <v-snackbar
+      v-model="snackbar"
+      :timeout="snackbarPropierties.timeout"
+      >
+      {{ snackbarPropierties.text }}
+
+      <template v-slot:actions>
+        <v-btn
+          color="blue"
+          variant="text"
+          @click="snackbar = false"
+        >
+          {{ snackbarPropierties.closeText }}
+        </v-btn>
+      </template>
+      </v-snackbar>
       <v-carousel show-arrows="hover" hide-delimiters>
           <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover></v-carousel-item>
           <v-carousel-item src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg" cover></v-carousel-item>
