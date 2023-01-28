@@ -12,14 +12,22 @@ const app = createApp({
   methods: {
       async shareUrl() {
           await navigator.share(shareData);
-      }
+          this.dialog = false
+      },
+      toggleNavigation() {
+        if (this.drawer == false) {
+          this.drawer = true
+        } else {
+          this.drawer = false
+        }
+    }
   },
 })
 
 const shareData = {
   title: 'NightlyCraft',
   text: '¡Un servidor de Minecraft donde todo puede pasar!',
-  url: 'https://www.nightlycraft.gq'
+  url: 'https://alenight.github.io/nightlycraft'
 }
 
 app.use(vuetify).mount('#app')

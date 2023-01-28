@@ -1,5 +1,6 @@
 <html>
 <head>
+  <title>NightlyCraft</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@3.1.2/dist/vuetify.min.css" rel="stylesheet">
@@ -17,7 +18,7 @@
         
         <v-app-bar-title>NightlyCraft</v-app-bar-title>
         <template v-slot:prepend>
-          <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon @click="toggleNavigation"></v-app-bar-nav-icon>
         </template>
         <v-btn icon="mdi-dots-vertical" @click="dialog = true"></v-btn>
         <v-dialog
