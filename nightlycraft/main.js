@@ -11,8 +11,8 @@ const app = createApp({
   }),
   methods: {
       async shareUrl() {
-          await navigator.share(shareData);
           this.dialog = false
+          await navigator.share(shareData);
       },
       toggleNavigation() {
         if (this.drawer == false) {
