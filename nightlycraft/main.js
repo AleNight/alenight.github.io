@@ -10,16 +10,16 @@ const app = createApp({
     dialog: false,
   }),
   methods: {
-      async shareUrl() {
-          this.dialog = false
-          await navigator.share(shareData);
-      },
-      toggleNavigation() {
-        if (this.drawer == false) {
-          this.drawer = true
-        } else {
-          this.drawer = false
-        }
+    async shareUrl() {
+      this.dialog = false
+      await navigator.share(shareData);
+    },
+    toggleNavigation() {
+      if (this.drawer == false) {
+        this.drawer = true
+      } else {
+        this.drawer = false
+      }
     }
   },
 })
