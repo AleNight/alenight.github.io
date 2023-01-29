@@ -28,11 +28,11 @@ const app = createApp({
       }
     },
     async copySnackbar() {
+      this.optionsDialog = false
+      this.snackbarPropierties.text = "Dirección IP copiada al portapapeles"
+      this.snackbar = true
       try {
         await navigator.clipboard.writeText("play.nightlycraft.idk");
-        this.optionsDialog = false
-        this.snackbarPropierties.text = "Dirección IP copiada al portapapeles"
-        this.snackbar = true
       } catch (err) {
         console.error('Failed to copy: ', err);
       }
