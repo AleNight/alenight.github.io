@@ -1,8 +1,15 @@
 html {
     font-family: "Urbanist Regular";
+    cursor: context-menu;
+    box-sizing: border-box;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+  }
+
 #header {
+    position: sticky;
     padding: 1.5em;
     margin: -0.5em;
     padding-top: 3em;
@@ -15,6 +22,61 @@ html {
     background-position: left;
     background-image: url("assets/background_1.webp");
     background: linear-gradient(90deg, rgba(219,239,255,1) 0%, rgba(219,239,255,0.8) 55%, rgba(219,239,255,0) 100%), url("assets/background_1.webp");
+    z-index: 2;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+#section-1 {
+    position: sticky;
+    background-color: antiquewhite;
+    padding: 1.5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    margin-top: -3.2em;
+    margin-left: -3em;
+    margin-right: -3em;
+    padding-bottom: .5em;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    height: fit-content;
+    box-sizing: border-box;
+    z-index: -1;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+#section-2 {
+    position: sticky;
+    background-color:aqua;
+    padding: 1.5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    margin-top: -1.5em;
+    margin-left: -3em;
+    margin-right: -3em;
+    padding-bottom: .5em;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    height: fit-content;
+    box-sizing: border-box;
+    z-index: -2;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#section-3 {
+    position: sticky;
+    background-color: blueviolet;
+    padding: 1.5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    margin-top: -1.5em;
+    margin-left: -3em;
+    margin-right: -3em;
+    padding-bottom: .5em;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    height: fit-content;
+    box-sizing: border-box;
+    z-index: -3;
 }
 
 #banner {
@@ -44,6 +106,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 9999;
 }
 
 .navbar.scroll-up {
@@ -101,6 +164,8 @@ html {
 #main {
     padding: 2em;
     padding-top: 2.5em;
+    padding-right: 2.5em;
+    z-index: -1;
 }
 
 h1 {
@@ -119,6 +184,7 @@ h3 {
 }
 
 a {
+    cursor: pointer;
     transition: 0.2s ease;
 }
 
@@ -141,6 +207,14 @@ a:active {
     text-decoration: none;
     font-size: 15px;
     transition: 0.2s ease;
+}
+
+.icon {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+}
+
+.icon-dark {
+    filter: drop-shadow(0 3 4px rgba(0, 0, 0, 0.2));
 }
 
 @font-face { 
