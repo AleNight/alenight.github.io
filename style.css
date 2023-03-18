@@ -1,0 +1,61 @@
+html {
+    font-family: "Urbanist Regular";
+}
+
+#navbar {
+    padding: 1.5em;
+    margin: -0.5em;
+    height: auto;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    background: rgb(219,239,255);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-image: url("assets/background_1.webp");
+    background: linear-gradient(90deg, rgba(219,239,255,1) 0%, rgba(219,239,255,0.8) 55%, rgba(219,239,255,0) 100%), url("assets/background_1.webp");
+}
+
+#banner {
+    padding: 1em;
+}
+
+h1 {
+    font-family: "Urbanist Black";
+    color: #12374D;
+}
+
+h2 {
+    font-family: "Urbanist Bold";
+    color: #12374D;
+}
+
+h3 {
+    font-family: "Urbanist Black";
+    color: #12374D;
+}
+
+@font-face { 
+    font-family: 'Urbanist Bold';
+    src: url('assets/Urbanist-Bold.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Black';
+    src: url('assets/Urbanist-Black.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist SemiBold';
+    src: url('assets/Urbanist-SemiBold.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Medium';
+    src: url('assets/Urbanist-Medium.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Regular';
+    src: url('assets/Urbanist-Regular.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Light';
+    src: url('assets/Urbanist-Light.ttf'); 
+}
