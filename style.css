@@ -2,10 +2,11 @@ html {
     font-family: "Urbanist Regular";
 }
 
-#navbar {
+#header {
     padding: 1.5em;
     margin: -0.5em;
-    height: auto;
+    padding-top: 3em;
+    padding-bottom: .5em;
     border-bottom-left-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
     background: rgb(219,239,255);
@@ -18,6 +19,88 @@ html {
 
 #banner {
     padding: 1em;
+    margin-top: -1em;
+}
+
+#title {
+    animation: fadeInUp 0.8s ease 0s 1 normal forwards;
+}
+
+#subtitle {
+    animation: fadeInUp 1.2s ease 0s 1 normal forwards;
+}
+
+.navbar {
+    margin-left: -.5em;
+    margin-top: -1em;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 1em;
+    transition: top 0.3s;
+    overflow: hidden;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.scroll-up {
+    top: 1em;
+    background: rgba(185, 225, 255, 0.7);
+    transition: 0.15s;
+    backdrop-filter: blur(4px);
+}
+  
+.navbar.scroll-down {
+    top: -100px;
+}
+
+.logo {
+    padding-left: 2em;
+    transition: 0.15s;
+}
+
+.logo.scroll-up {
+    padding-left: 1em;
+    transition: 0.15s;
+}
+
+.logo.scroll-down {
+    padding-left: 2em;
+    transition: 0.15s;
+}
+
+.row {
+    float: right;
+    padding-right: 2.5em;
+    transition: 0.15s;
+}
+
+.row.scroll-up {
+    float: right;
+    padding-right: 1.5em;
+    transition: 0.15s;
+}
+
+.row.scroll-down {
+    float: right;
+    padding-right: 1.5em;
+    transition: 0.15s;
+}
+
+
+.row-link {
+    color: white;
+    font-family: "Urbanist SemiBold";
+    width: 100px;
+    margin-left: 1em;
+}
+
+#main {
+    padding: 2em;
+    padding-top: 2.5em;
 }
 
 h1 {
@@ -33,6 +116,31 @@ h2 {
 h3 {
     font-family: "Urbanist Black";
     color: #12374D;
+}
+
+a {
+    transition: 0.2s ease;
+}
+
+a:link { 
+    text-decoration: none;
+}
+
+a:visited { 
+    text-decoration: none;
+}
+
+a:hover { 
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.2s ease;
+    text-shadow: 0px 1px 5px rgba(0,0,0,0.15);
+}
+
+a:active { 
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s ease;
 }
 
 @font-face { 
@@ -59,3 +167,16 @@ h3 {
     font-family: 'Urbanist Light';
     src: url('assets/Urbanist-Light.ttf'); 
 }
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+  
