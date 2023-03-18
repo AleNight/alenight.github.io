@@ -145,27 +145,27 @@ a:active {
 
 @font-face { 
     font-family: 'Urbanist Bold';
-    src: url('assets/Urbanist-Bold.ttf'); 
+    src: url('assets/fonts/Urbanist-Bold.ttf'); 
 }
 @font-face { 
     font-family: 'Urbanist Black';
-    src: url('assets/Urbanist-Black.ttf'); 
+    src: url('assets/fonts/Urbanist-Black.ttf'); 
 }
 @font-face { 
     font-family: 'Urbanist SemiBold';
-    src: url('assets/Urbanist-SemiBold.ttf'); 
+    src: url('assets/fonts/Urbanist-SemiBold.ttf'); 
 }
 @font-face { 
     font-family: 'Urbanist Medium';
-    src: url('assets/Urbanist-Medium.ttf'); 
+    src: url('assets/fonts/Urbanist-Medium.ttf'); 
 }
 @font-face { 
     font-family: 'Urbanist Regular';
-    src: url('assets/Urbanist-Regular.ttf'); 
+    src: url('assets/fonts/Urbanist-Regular.ttf'); 
 }
 @font-face { 
     font-family: 'Urbanist Light';
-    src: url('assets/Urbanist-Light.ttf'); 
+    src: url('assets/fonts/Urbanist-Light.ttf'); 
 }
 
 @keyframes fadeInUp {

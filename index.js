@@ -29,3 +29,18 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
+
+var hover = document.getElementById("hover");
+var click = document.getElementById("click");
+
+document.querySelectorAll('.row-link').forEach( button => {
+  button.onclick = function () {
+    click.play();
+  }
+  button.onmouseover = function () {
+    hover.play();
+  }
+  button.onmouseleave = function () {
+    hover.currentTime = 0;
+  }
+});

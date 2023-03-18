@@ -1,0 +1,169 @@
+/* Make only the background blurred, but not content in it */
+
+html {
+    font-family: "Urbanist Regular";
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-color: rgb(219,239,255);
+}
+
+.container {
+    /* set container position & size */
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.background-image {
+    /* set background image styling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(219,239,255,0.8) 0%, rgba(219,239,255,0.5) 55%, rgba(219,239,255,0) 100%), url('../assets/background_1.webp');
+    background-size: cover;
+    z-index: -1; /* move image behind content */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#title {
+    text-align: center;
+}
+
+.button {
+    background-color: azure;
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.15);
+    color: #12374D;
+    font-family: "Urbanist Bold";
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10em;
+    transition: 0.2s ease;
+    margin-bottom: .8em;
+    margin-left: 25%;
+}
+
+.button:hover {
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
+    margin-bottom: .9em;
+    transition: 0.2s ease;
+}
+
+.button:active {
+    margin-top: 0.1em;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+#title-div {
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    height: fit-content;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    animation: fade 0.4s ease 0s 1 normal forwards;
+}
+
+#main {
+    position: relative;
+}
+
+.logo {
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    padding: 1em;
+    transition: 0.2s ease;
+    animation: fade 0.8s ease 0s 1 normal forwards;
+}
+
+.logo:hover {
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+    padding: 1em;
+    margin-bottom: .2em;
+    transition: 0.3s ease;
+}
+
+h1 {
+    font-family: "Urbanist Black";
+    color: #12374D;
+}
+
+h2 {
+    font-family: "Urbanist Bold";
+    color: #12374D;
+}
+
+h3 {
+    font-family: "Urbanist Black";
+    color: #12374D;
+}
+
+@font-face { 
+    font-family: 'Urbanist Bold';
+    src: url('../assets/fonts/Urbanist-Bold.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Black';
+    src: url('../assets/fonts/Urbanist-Black.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist SemiBold';
+    src: url('../assets/fonts/Urbanist-SemiBold.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Medium';
+    src: url('../assets/fonts/Urbanist-Medium.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Regular';
+    src: url('../assets/fonts/Urbanist-Regular.ttf'); 
+}
+@font-face { 
+    font-family: 'Urbanist Light';
+    src: url('../assets/fonts/Urbanist-Light.ttf'); 
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
